@@ -1,0 +1,384 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    user-select: none;
+}
+
+a{
+    text-decoration: none;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    text-decoration: none;
+}
+
+/* Стили для хедера */
+header {
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.search-bar {
+    margin: 20px 0;
+    width: 100%;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Стили для карточек товаров */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: calc(33.333% - 40px); /* Три карточки в ряд */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    user-select: none;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.card p {
+    color: #555;
+}
+
+.card .price-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.card .price {
+    font-size: 18px;
+    color: #333;
+}
+
+.card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.card button:hover {
+    background-color: #0056b3;
+}
+
+category-sort {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.category-sort button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.category-sort button:hover {
+    background-color: #0056b3;
+}
+
+/* Адаптивные стили */
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .card .price-button-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card .price {
+        margin-bottom: 10px;
+    }
+}
+
+
+.delivery-info1 {
+    background-color: white;
+    color: white;
+    padding: 38px;
+    text-align: center;
+    width: 100%;
+}
+
+.delivery-info {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.red {
+    background-color: red;
+    color: black;
+    padding: 38px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Стили для проверки возраста */
+.age-check {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.age-check p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.age-check button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.age-check button:hover {
+    background-color: #0056b3;
+}
+
+.no-button {
+    background-color: red;
+}
+
+.no-button:hover {
+    background-color: darkred;
+}
+
+.confirmation-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Адаптивные стили */
+@media (max-width: 600px) {
+    .header-content {
+        align-items: flex-start;
+        padding: 10px; /* Уменьшите отступы */
+    }
+
+    .header-content nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        padding: 5%;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px 0;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        ser-select: none;
+    }
+
+    .card .price-button-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card .price {
+        margin-bottom: 10px;
+    }
+
+    .confirmation-text {
+        margin: 20px;
+        font-size: 10px;
+        color: #ccc;
+    }
+
+    .age-check {
+        font-size: 14px;
+    }
+}
+
+.main-container.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    width: calc(100% - 40px); /* Убедитесь, что карточка занимает всю ширину контейнера */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    margin: 20px auto;
+    -webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.main-container.card:hover {
+    transform: scale(1.05);
+}
+
+.main-container.card img {
+    max-width: 50%; /* Уменьшите ширину изображения до 50% от ширины контейнера */
+    height: auto; /* Сохраните пропорции изображения */
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto; /* Центрируйте изображение */
+}
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10%;
+            background-color: #333;
+            color: white;
+        }
+        .logo {
+            height: 60px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: #555;
+            transition: background-color 0.3s;
+        }
+        .nav-links a:hover {
+            background-color: #777;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+        }
+        .side-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #333;
+            text-align: right;
+            transition: 0.3s;
+        }
+        .side-menu a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            font-weight: bold;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 36px;
+            cursor: pointer;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Правила доставки</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        
+    </header>
+        <div class="delivery-info">Доставка от 99р</div>
+    <div class="red">.</div>
+    <div id="content" style="display: none; width: 100%;">
+        <div class="main-container">
+            <h2>❓КАК ПРОИСХОДИТ ДОСТАВКА</h2>
+            
+            <ul>
+                <li>▶️Доставка  будет осуществляться через яндекс доставку </li>
+                <li>▶️После выбора товара,выбора ближайшей к вам точки, уточнения наличия, вы оплачиваете полную стоимость самого товара и также доставки до вашего адреса</li>
+                <li>▶️После оплаты мы вам высылаем товар на ваш адрес</li>
+                <li>🚕 Заказы и доставка осуществляется с 10:30 до 21:30</li>
+                <li>⚡️Заказать тут <a hreh="">TELEGRAM</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('header/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('header').innerHTML = data;
+                // Инициализация скриптов и стилей после загрузки header
+                const script = document.createElement('script');
+                script.src = 'header/header.js';
+                document.body.appendChild(script);
+
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'header/header.css';
+                document.head.appendChild(link);
+            })
+            .catch(error => console.error('Error loading header:', error));
+    });
+</script>
+</body>
+</html>
